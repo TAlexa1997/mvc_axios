@@ -1,9 +1,14 @@
 import DataService from "../Modell/DataService.js";
 
-class Controller{
+export default class Controller{
     constructor(){
-        new DataService();
+        this.dataService=new DataService();
+
+        this.dataService.getData("adatok.json",this.megjelenit)
+    }
+
+    megjelenit(list){
+        console.log(list);
     }
 }
 
-export default Controller;
