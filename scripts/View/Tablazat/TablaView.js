@@ -1,5 +1,6 @@
-import SorView from "../View/SorView.js";
-import FejlecView from "../View/FejlecView.js";
+
+import SorView from "./SorView.js";
+import FejlecView from "./FejlecView.js";
 
 export default class TablaView {
   #list = [];
