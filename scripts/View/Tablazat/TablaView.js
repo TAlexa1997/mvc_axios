@@ -15,6 +15,7 @@ export default class TablaView {
     new FejlecView(this.#list[0],this.theadElem)
 
     this.sorMegjelenit();
+    
   }
 
   sorMegjelenit() {
@@ -22,5 +23,5 @@ export default class TablaView {
     this.#list.forEach((elem, index) => {
       new SorView(index, elem, this.tbodyElem);
     });
-  }
+}
 }

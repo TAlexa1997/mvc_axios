@@ -1,21 +1,20 @@
-import FejlecView from "../Tablazat/FejlecView";
+import LabelView from "./LabelView.js";
 
-export default class UrlapView{
-    constructor(szuloElem,){
-        this.szuloElem=szuloElem
-        //letrehozok egy form taget
-        //letrehozok egy kapaszkodót a formelemhez this.formElem
-        this.htmlOsszerak()
-    }
+export default class UrlapView {
+  #list = [];
+  constructor(list, szuloElem) {
+    this.#list = list;
+    console.log(this.#list);
+    szuloElem.append("<form class='urlap'><fieldset disabled><legend>Ürlap</legend></fieldset></form>");
+    this.formElem = szuloElem.find("form");
+    this.sorMegjelenit();
+    szuloElem.append("<button>Küldés</button>");
+  }
 
-    htmlOsszerak(){
-        let urlap="<form>";
+  sorMegjelenit() {
+    const labelView = new LabelView(this.#list[0], this.formElem);
     
-        for (const key in this.list) {
-            urlap +=`<td>${this.list[key]}</td>`
-            }
-            urlap+="</form>";
-            this.szuloElem.append(txt)
-        
-    }
+  }
 }
+
+

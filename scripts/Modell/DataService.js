@@ -20,6 +20,17 @@ class DataService {
       });
   }
 
+  submitForm() {
+    axios.post('/api/submit', this.formModel)
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error('Hiba történt az adatküldés során:', error);
+      });
+  }
+
+
   postData() {}
 
   putData() {}

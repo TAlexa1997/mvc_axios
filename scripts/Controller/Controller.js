@@ -1,6 +1,7 @@
 import DataService from "../Modell/DataService.js";
 import TablaView from "../View/Tablazat/TablaView.js";
-import UrlapView from "../View/Urlap/UrlapView.js";
+
+
 
 export default class Controller{
     constructor(){
@@ -12,7 +13,7 @@ export default class Controller{
         console.log(list);
         //példányosítjuk a view-t a Táblázatot
         new TablaView(list,$(".adatok"));
-        new UrlapView(list,$(".urlap"))
+        
     }
 }
 
