@@ -8,7 +8,7 @@ export default class UrlapView {
     szuloElem.append("<form class='urlap'><fieldset disabled><legend>Ürlap</legend></fieldset></form>");
     this.formElem = szuloElem.find("form");
     this.sorMegjelenit();
-    szuloElem.append("<button>Küldés</button>");
+    szuloElem.append("<button type='submit' class='btn btn-primary'>Küldés</button>");
   }
 
   sorMegjelenit() {
